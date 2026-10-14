@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animations en Keyframes</title>
+</head>
+<body>
+    <h1>Quelques animations en <span>Keyframes</span></h1>
+    <div class="sous-titre">
+        <p>Ces exemples servent à faire pratiquer les animations avec <span>@keyframes</span>. Il en existe beaucoup plus de possibilités et déclinaisons de ces animations, seule l'imagination est la limite. J'ai l'intention d'en rajouter au fur et à mesure de mon apprentissage.</p>
+    </div>
+    
+    <!-- OPACITY  -->
+
+    <section>
+        <h2>Animation avec <span><i>Opacity</i></span></h2>
+        <div class="container">
+            <div class="square fade"></div>
+            <img src="Captures/Opacity.png" alt="Capture d'écran des lignes de codes CSS pour une animation d'opacité">
+            <p>Il est aussi possible de faire l'inverse avec une opacité démarrant à 100% et se terminant à 0%. A vous de jouer avec la propriété "opacity" pour faire l'animation que vous souhaitez !</p>
+            <p>Plus d'info sur la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Properties/opacity" target="_blank">ici</a>.</p>
+        </div>
+    </section> 
+
+    <!-- SCALE  -->
+
+    <section>
+        <h2>Animation avec <span><i>Scale</i></span></h2>
+        <div class="container">
+            <div class="square scale"></div>
+            <img src="Captures/Scale.png" alt="Capture d'écran des lignes de codes CSS pour une animation avec la propriété scale">
+            <p>Quand j'ulise des points (".5") c'est comme écrire "0.5". C'est un raccourci qui nous évite de mettre le 0 a chaque fois. Cela fonctionne pour tout dans ton IDE.</p>
+            <p>Plus d'info sur la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Values/transform-function/scale" target="_blank">ici</a>.</p>
+        </div>
+    </section>
+
+    <!-- ROTATE  -->
+    <section>
+        <h2>Animation avec <span><i>Rotate</i></span></h2>
+        <div class="container">
+            <div class="square rotate"></div>
+            <img src="Captures/Rotate.png" alt="Capture d'écran des lignes de codes CSS pour une animation de rotation">
+            <p>Les unités "turn" et "deg" font le même travail, se sont juste des unités de mesures différente. ( "1turn" = "360deg" donc ".5turn" = "180deg")</p>
+            <p>Plus d'info sur la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Values/transform-function/rotate" target="_blank">ici</a>.</p>
+
+            <div class="square rotate-circle"></div>
+            <img src="Captures/RotateCircle.png" alt="Capture d'écran des lignes de codes CSS pour une animation de rotation">
+            <p>Animation de "rotate" plus simple, le principale étant de bien mettre en forme l'élément animé pour qu'il ressemble à un loader qui tourne. Le border-radius pour transformer le carré en rond,  "border" & "border-color" pour faire apparaitre le cercle.</p>
+            <p>Plus d'info sur la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Values/transform-function/rotate" target="_blank">ici</a>.</p>
+
+        </div>
+    </section>
+
+    <!-- TRANSLATE  -->
+
+    <section>
+        <h2>Animation avec <span><i>Translate</i></span></h2>
+        <div class="container">
+            <div class="square translate"></div>
+            <img src="Captures/Translate.png" alt="Capture d'écran des lignes de codes CSS pour une animation de translation">
+            <p>A vous de jouez avec le nombre de pixel pour déplacer le carré selon vos préférence. Ainsi qu'avec avec l'axe X , Y ou Z pour animer en 2D ( X, Y ) ou en 3D (X, Y, Z).</p>
+            <p>Plus d'info sur la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Values/transform-function/translate" target="_blank">ici</a>.</p>
+        </div>
+    </section>
+
+    <!-- PERSPECTIVE  -->
+            
+    <section>
+        <h2>Animation avec <span><i>Perspective</i></span></h2>
+        <div class="container">
+            <div class="square perspective"></div>
+            <img src="Captures/Perspective.png" alt="Capture d'écran des lignes de codes CSS pour une animation de perspective">
+            <p>Ici il est très important de mettre "none" dans la propriété "perspective" car 0 donne un effet ou l'élément prend tout l'écran et donne l'impression de sortir de ce dernier. Vous remarquerez aussi que plus le degrès de rotate est petit plus l'effet de perspective parait grand.</p>
+            <p>Plus d'info sur la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Values/transform-function/perspective" target="_blank">ici</a>.</p>
+        </div>
+    </section>
+
+    <!-- SKEW  -->
+
+         <section>
+            <h2>Animation avec <span><i>Skew</i></span></h2>
+            <div class="container">
+                <div class="square skew"></div>
+                <img src="Captures/Skew.png" alt="Capture d'écran des lignes de codes CSS pour une animation de perspective">
+                <p>La fonction CSS skew() définit une transformation qui incline un élément dans le plan 2D. </p>
+                <p>Plus d'info sur la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Values/transform-function/skew" target="_blank">ici</a>.</p>
+            </div>
+        </section>
+
+    <!-- COMBINEE  -->
+
+        <section>
+            <h2>Animation combinée avec <span><i>Scale</i></span> & <span><i>Translate</i></span></h2>
+            <div class="container">
+                <div class="square combine"></div>
+                <img src="Captures/Combinés.png" alt="">
+                <p>Vous pouvez utiliser autant de propriété "transform" que vous le voulez mais respectez bien l'ordre : de droite à gauche pour l'ordre des priorités.</p>
+            </div>
+        </section>
+</body>
+</html>

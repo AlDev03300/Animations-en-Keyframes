@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0  ;
+}
+body{
+    font-family: "Clarity City", sans-serif;
+    padding: 2rem 0;
+    background-color: whitesmoke;
+}
+
+span{
+    color: blueviolet;
+    font-weight: bolder;
+}
+
+a{
+    text-decoration: none;
+    color: blueviolet;
+    transition: all .2s ease-in-out;
+    font-weight: bold;
+    &:hover{
+        opacity: .6;
+    }
+}
+
+h1{
+    text-align: center;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+.sous-titre{
+    padding: 1rem;
+    /* margin: 0 auto;
+    width: 100%; */
+    text-align: center;
+}
+h2{
+    padding: 2rem;
+}
+
+img{
+    padding: 2rem 0;
+    width: clamp(300px,50vw, 700px);
+    height: auto;
+}
+
+.container{
+    box-shadow:
+  0 1px 3px rgba(0,0,0,0.12),
+  0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem; 
+    background-color: white;
+}
+
+.square{
+    height: 100px;
+    width: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: blueviolet; 
+}
+
+
+/* OPACITE */
+
+.fade{
+    animation: fadeIn 3s linear infinite; /* Nom Durée Timing Répétition */
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0; /* Au début le carré est invisible */
+    }
+    30%{
+        opacity: .3; /* A 30 % des 3s il est a 30% d'opacité */
+    }
+    50%{
+        opacity: .5; /* A 50 % des 3s il est a 50% d'opacité */
+    }
+    100%{
+        opacity: 1; /* A la fin il est 100% visible */
+    }
+}
+
+/* SCALE */
+
+.scale{
+    animation: scale 3s linear infinite 2s ; /* Nom Durée Timing Répétition Délai */
+}
+
+@keyframes scale {
+    0%{
+       transform: scale(0); /* Position initiale */
+    }
+    30%{
+        transform: scale(.3); /* A 30% des 5s le carré est a 30% de sa taille initiale */
+    }
+    50%{
+        transform: scale(.5); /* A 50% des 5s le carré est a 50% de sa taille initiale */
+    }
+    100%{
+        transform: scale(1); /* A la fin des 5s le carré est à sa taille initiale */
+    }
+}
+
+/* ROTATE */
+
+.rotate{
+    animation: rotate 5s ease infinite 3s; /* Nom Durée Timing Répétition Délai */
+}
+
+@keyframes rotate {
+    0%{
+       transform: rotate(0); /* Pas de rotation */
+    }
+    50%{
+        transform: rotate(-50deg); /* A 50% des 5s le carré est a -50deg */
+    }
+    70%{
+        transform: rotate(.5turn); /* A 70% des 5s le carré tourne la moitié d'un tour */
+    }
+    100%{
+        transform: rotate(0); /* A la fin le carré reviens à sa position initiale */
+    }
+}
+
+/* ROTATE CIRCLE  */
+
+.rotate-circle{
+    border-radius: 50%;
+    border: 6px solid blueviolet;
+    border-color: transparent blueviolet transparent blueviolet;
+    background-color: inherit;
+    margin-top: 2rem;
+    animation: rotateCircle 2s linear infinite; /* Nom Durée Timing Répétition */
+}
+
+
+@keyframes rotateCircle {
+    0%{
+       transform: rotate(0); /* Pas de rotation */
+    }
+  
+    100%{
+        transform: rotate(1turn); /* Fais un tour à 360deg */
+    }
+}
+
+/* TRANSLATE */
+
+.translate{
+    animation: translate 3s ease-in-out infinite ; /* Nom Durée Timing Répétition */
+}
+
+@keyframes translate {
+    0%{
+       transform: translate(0); /* Position initiale */
+    }
+    30%{
+        transform: translate(-150px); /* A 30% le carré se deplace à -150px de sa position initiale */
+    }
+    50%{
+        transform: translate(150px); /* A 50% le carré se deplace 150px de sa position initiale */
+    }
+    100%{
+        transform: translate(0); /* A la fin le carré reviens à sa position initiale */
+    }
+}
+
+/* PERSPECTIVE */
+
+.perspective{
+    animation: perspective 3s ease infinite ; /* Nom Durée Timing Répétition */
+}
+
+@keyframes perspective {
+    0%{
+       transform: perspective(none) rotateY(0); /* Position initiale */
+    }
+    30%{
+        transform: perspective(50px) rotateY(15deg); /* A 30% le carré tourne d'abords de 15deg puis 50px de perspective */
+    }
+    70%{
+        transform: perspective(40px) rotateY(-15deg); /* A 70% le carré tourne d'abords de -15deg puis 40px de perspective */
+    }
+    100%{
+        transform: perspective(none) rotateY(0); /* A la fin le carré reviens à sa position initiale */
+    }
+}
+
+/* SKEW */
+
+.skew{
+    animation: skew 5s ease infinite ; /* Nom Durée Timing Répétition */
+}
+
+@keyframes skew {
+    0%{
+       transform: skew(0); /* Position initiale */
+    }
+    30%{
+        transform: skew(15deg); /* A 30% des 5s le carré est "skew" de -30deg */
+    }
+    70%{
+        transform: skew(-30deg); /* A 70% des 5s le carré est "skew" de -30deg */
+    }
+    100%{
+        transform: skew(0); /* A la fin le carré reviens à sa position initiale */
+    }
+}
+
+/* COMBINES */
+
+.combine{
+    animation: combine 6s ease infinite; /* Nom Durée Timing Répétition */
+}
+
+@keyframes combine {
+    0%{
+       transform: scale(1); /* Position initiale */
+    }
+    30%{
+        transform: scale(.3) translate(200px); /* A 30% des 6s le carré se positionne à 200px en 1er puis se reduit à 30% */
+        
+    }
+    70%{
+        transform: scale(1.2) translate(0); /* A 70% des 6s le carré revient à sa position initiale puis grandit à 120% */
+
+    }
+     100%{
+        transform:  translate(0) scale(1); /* A la fin des 6s le carré revient à sa taille puis sa position initiale */
+    }
+}
+
+
+
